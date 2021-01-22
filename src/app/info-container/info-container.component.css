@@ -1,0 +1,52 @@
+.info-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-content h3{
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 120%;
+  margin-bottom: 24px;
+}
+
+.info-content p{
+  margin-bottom: 16px;
+  font-size: 16px;
+  line-height: 150%;
+  position: relative;
+}
+
+.info-p-vector{
+  margin-left: 28px;
+}
+
+.info-p-vector:before{
+  content: '';
+  width: 19px;
+  height: 17px;
+  position: absolute;
+  background-image: url(../../assets/img/Vector.png);
+  left: -28px;
+  bottom: 3px;
+}
+
+.tech-logo-container{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: start;
+  margin-top: 24px;
+}
+
+.tech-logo-container:last-child{
+  margin-top: 26px;
+}
+
+.tech-logo{
+  margin-left: 20px;
+}
+
+.tech-logo:first-child{
+  margin: 0;
+}

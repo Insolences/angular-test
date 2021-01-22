@@ -1,0 +1,54 @@
+:host {
+  font-family:  'Nunito Sans', sans-serif;
+  font-size: 14px;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --default-background: #F8F8F9;
+  --black-background: black;
+  --rectangl-line: #FFACC4;
+  --label-color: #c6c1c1;
+  --input-field-text: #323232;
+  --unit: 10px;
+}
+
+@media (max-width: 900px){
+  .wrapper {
+    flex-direction: column;
+    height: 100%;
+  }
+  .reg-button {
+    align-self: center;
+  }
+  .reg-container {
+    width: 100%;
+  }
+  .reg-text{
+    margin: 16px 0 0;
+  }
+  .info-container {
+    width: 100%;
+    padding: 63px 0 240px 0;
+  }
+  /*.reg-buttons-container{*/
+  /*    margin: 48px 0;*/
+  /*}*/
+  .input-full-name {
+    flex-wrap: wrap;
+  }
+  .form-input50 {
+    width: 100%;
+  }
+  .input-container {
+    width: 100%;
+    margin: 37px 0 0;
+  }
+  .input-full-name .input-container {
+    width: 100%;
+    margin: 30px 0 0;
+  }
+  .form-input100-m48 {
+    margin-top: 0;
+  }
+}
+

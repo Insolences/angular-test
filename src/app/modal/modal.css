@@ -1,0 +1,96 @@
+.modal {
+  width: 100%;
+  max-width: 784px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 30;
+  box-shadow: 0 3px 10px -.5px rgba(0, 0, 0, .2);
+  text-align: center;
+  padding: 4px;
+  border-radius: 3px;
+  background-color: #fff;
+  transition: 0.3s all;
+}
+
+@media all and (max-width: 900px){
+  .modal{
+    max-width: 90%;
+    height: 95%;
+  }
+}
+
+.modal-content{
+  text-align: start;
+  padding: 0 60px 0 64px;
+  margin: 54px 0 25px 0;
+  overflow: auto;
+  height: 76vh;
+}
+
+@media all and (max-width: 900px){
+  .modal-content{
+    padding: 0 34px 0 37px;
+    height: 92%;
+  }
+}
+
+.modal-content h3{
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 120%;
+  margin: 0 0 24px 0;
+}
+
+.modal-content h4{
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 120%;
+  margin: 40px 0 16px 0;
+}
+
+.modal-content p{
+  font-size: 14px;
+  line-height: 150%;
+  margin-top: 16px;
+}
+
+.modal-content p:first-child{
+  margin-top: 0;
+}
+
+.modal-content::-webkit-scrollbar {
+  width: 6px;
+  background-color: #ffffff;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: var(--label-color);
+}
+
+.modal-content::-webkit-scrollbar-track {
+  opacity: 0.2;
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+
+.modal.active,
+.overlay.active{
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal__cross {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  fill: #444;
+  cursor: pointer;
+}
+
+

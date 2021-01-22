@@ -1,0 +1,13 @@
+.error-text{
+  font-size: 12px;
+  line-height: 150%;
+  color: #FF1E1E;
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: -24px;
+}
+
+.error-check-text{
+  left: 0;
+}
