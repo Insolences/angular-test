@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
-import {Routes, RouterModule} from '@angular/router';
-import {FirstPageRegistrationComponent} from './first-page-registration/first-page-registration.component';
-import {FinalPageComponent} from './final-page/final-page.component';
+import { Routes, RouterModule } from '@angular/router';
+import { PageRegistrationComponent } from './page-registration/page-registration.component';
+import { FinalPageComponent } from './final-page/final-page.component';
 
 const routes: Routes = [
-  { path: '', component: FirstPageRegistrationComponent },
+  { path: '', component: PageRegistrationComponent },
   { path: 'final', component: FinalPageComponent}
 ];
 

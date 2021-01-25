@@ -1,14 +1,14 @@
-import {Component, OnInit, Output, EventEmitter} from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-first-page-form',
-  templateUrl: './first-page-form.component.html',
-  styleUrls: ['./first-page-form.component.css']
+  templateUrl: './first-form-page.component.html',
+  styleUrls: ['./first-form-page.component.css']
 })
 
-export class FirstPageFormComponent implements OnInit {
+export class FirstFormPageComponent implements OnInit {
   public userForm: FormGroup;
   formSubmitAttempt = false;
   @Output() nextForm = new EventEmitter<any>();
@@ -32,7 +32,8 @@ export class FirstPageFormComponent implements OnInit {
     }
   }
 
-  isFieldInvalid(field: string): boolean {
-    return this.formSubmitAttempt && this.userForm.get(field).invalid;
-  }
+  // isFieldInvalid(field: string): boolean {
+  //   console.log('at fn we have: ', field)
+  //   return this.formSubmitAttempt && this.userForm.get(field).invalid;
+  // }
 }

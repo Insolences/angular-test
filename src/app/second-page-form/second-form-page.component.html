@@ -1,31 +1,65 @@
 <form class="form validate-form-page2" [formGroup]="userForm">
   <div class="input-container">
-    <div class="form-input100-m28 validate-input" [class.error-validate]="isFieldInvalid('company')">
+    <div class="form-input100-m28 validate-input"
+         [class.error-validate]="{
+         formIsSubmitted: formSubmitAttempt,
+         form: userForm,
+         fieldName: 'company',
+         fieldValue: userForm.get('company').value
+         } | validateField">
       <label class="label-input100">Company</label>
       <input id="company-input" formControlName="company" class="inputField" type="text" name="Company"  placeholder="Company...">
       <span class="focus-input100" [className]="userForm.get('company').valid ? 'true-validate' : 'hide'"></span>
     </div>
-    <app-validator-message [displayError]="isFieldInvalid('company')" [errorText]="'Please give us some details'"></app-validator-message>
+    <app-validator-message
+      [displayError]="{
+         formIsSubmitted: formSubmitAttempt,
+         form: userForm,
+         fieldName: 'company',
+         fieldValue: userForm.get('company').value
+      } | validateField" [errorText]="'Please give us some details'"></app-validator-message>
   </div>
   <div class="input-container">
-    <div class="form-input100-m28 validate-input" [class.error-validate]="isFieldInvalid('phone')">
+    <div class="form-input100-m28 validate-input"
+         [class.error-validate]="{
+         formIsSubmitted: formSubmitAttempt,
+         form: userForm,
+         fieldName: 'phone',
+         fieldValue: userForm.get('phone').value
+         } | validateField">
       <label for="phone-input" class="label-input100">Phone number</label>
       <input id="phone-input" formControlName="phone" class="inputField" type="tel" name="Phone" placeholder="Phone number...">
       <span class="focus-input100" [className]="userForm.get('phone').valid ? 'true-validate' : 'hide'"></span>
     </div>
     <app-validator-message
-      [displayError]="isFieldInvalid('phone')"
+      [displayError]="{
+         formIsSubmitted: formSubmitAttempt,
+         form: userForm,
+         fieldName: 'phone',
+         fieldValue: userForm.get('phone').value
+      } | validateField"
       [errorText]="'Please give us some details'">
     </app-validator-message>
   </div>
   <div class="input-container">
-    <div class="form-input100-m28 validate-input" [class.error-validate]="isFieldInvalid('password')">
+    <div class="form-input100-m28 validate-input"
+         [class.error-validate]="{
+         formIsSubmitted: formSubmitAttempt,
+         form: userForm,
+         fieldName: 'password',
+         fieldValue: userForm.get('password').value
+         } | validateField">
       <label class="label-input100">Password</label>
       <input id="password-input" formControlName="password" class="inputField" type="password" name="Password" placeholder="Password...">
       <span class="focus-input100" [className]="userForm.get('password').valid ? 'true-validate' : 'hide'"></span>
     </div>
     <app-validator-message
-      [displayError]="isFieldInvalid('password')"
+      [displayError]="{
+         formIsSubmitted: formSubmitAttempt,
+         form: userForm,
+         fieldName: 'password',
+         fieldValue: userForm.get('password').value
+      } | validateField"
       [errorText]="'Please give us some details'">
     </app-validator-message>
   </div>
@@ -35,8 +69,13 @@
       <p>Accept <span class="open-modal" (click)="handleShowModal()">Privacy Statement</span> and <span class="open-modal" (click)="handleShowModal()">Terms & Conditions</span></p>
     </div>
     <app-validator-message
+      [displayError]="{
+         formIsSubmitted: formSubmitAttempt,
+         form: userForm,
+         fieldName: 'checkPrivacy',
+         fieldValue: userForm.get('checkPrivacy').value
+      } | validateField"
       [classCheck]="'error-text error-check-text'"
-      [displayError]="isFieldInvalid('checkPrivacy')"
       [errorText]="'Please agree to continue'">
     </app-validator-message>
   </div>

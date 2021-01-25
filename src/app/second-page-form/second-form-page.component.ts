@@ -4,11 +4,11 @@ import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-second-page-form',
-  templateUrl: './second-page-form.component.html',
-  styleUrls: ['./second-page-form.component.css']
+  templateUrl: './second-form-page.component.html',
+  styleUrls: ['./second-form-page.component.css']
 })
 
-export class SecondPageFormComponent implements OnInit {
+export class SecondFormPageComponent implements OnInit {
   public userForm: FormGroup;
   formSubmitAttempt = false;
   showModal = false;
@@ -36,7 +36,6 @@ export class SecondPageFormComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.userForm);
     this.formSubmitAttempt = true;
 
     if (this.userForm.valid) {
@@ -46,16 +45,14 @@ export class SecondPageFormComponent implements OnInit {
     }
   }
 
-  isFieldInvalid(field: string): boolean {
-    return this.formSubmitAttempt && this.userForm.get(field).invalid;
-  }
-  handleShowModal(){
+  handleShowModal() {
     this.showModal = true;
   }
-  handleCloseModal(){
+  handleCloseModal() {
     this.showModal = false;
   }
-  handleBackToFirstPage(){
+  handleBackToFirstPage() {
     this.backForm.emit(true);
   }
 }
+
